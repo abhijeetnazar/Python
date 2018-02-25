@@ -13,7 +13,6 @@ def getMovieTitles(substr):
     res = urllib.request.urlopen('https://jsonmock.hackerrank.com/api/movies/search/?Title='+substr)
     res_body = res.read()
     j = json.loads(res_body.decode("utf-8"))
-    counter = 0
     count = j['total_pages']
     array = []
     for i in range(count):
