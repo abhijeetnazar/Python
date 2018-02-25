@@ -8,11 +8,10 @@ import json
 def getMovieTitles(substr):
     # parse strings: 'ip_prefix' and 'region'
     # for i in range(len(j['prefixes'])):
-    #	print("{0}\t{1}".format(j['prefixes'][i]['ip_prefix'], j['prefixes'][i]['region']))
+    # print("{0}\t{1}".format(j['prefixes'][i]['ip_prefix'], j['prefixes'][i]['region']))
     res = urllib.request.urlopen('https://jsonmock.hackerrank.com/api/movies/search/?Title='+substr)
     res_body = res.read()
     j = json.loads(res_body.decode("utf-8"))
-    counter = 0
     count = j['total_pages']+1
     array = []
     for i in range(count):
