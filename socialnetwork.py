@@ -1,6 +1,7 @@
 from itertools import groupby
 import numpy as np
 import pandas as pd
+import anaconda_project
 import collections
 
 
@@ -22,7 +23,7 @@ print(unique(testlist))
 np.unique(np.array(testlist))
 
 
-testlist = [3, 3, 3, 2, 2, 3, 2, 3, 2, 3, 4, 4, 4, 4]
+testlist = [3, 3, 3, 2, 2, 3, 2, 3, 2, 3, 4, 4, 4, 4, 2, 2, 4, 4, 4, 2, 2, 4]
 testlist2 = testlist
 sample = []
 sample2 = []
@@ -35,12 +36,12 @@ def getunorderedlist(counts):
     for count in originalcount:
         # print(originalcount)
         getnumberindex = [i for i, v in enumerate(originalcount) if v == count]
-        print(originalcount)
+        print(originalcount, getnumberindex)
         for i, j in zip(range(count), getnumberindex):
             returncount.append(originalcount[j])
         for j in range(count):
             #print(count, range(count))
-            originalcount.remove(count)
+            originalcount.pop(originalcount.index(count))
         print(range(count), originalcount)
     return returncount
 
