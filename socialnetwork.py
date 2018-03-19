@@ -2,6 +2,7 @@ from itertools import groupby
 import numpy as np
 import pandas as pd
 import anaconda_project
+import anaconda_navigator
 import collections
 
 
