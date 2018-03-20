@@ -1,9 +1,4 @@
 from itertools import groupby
-import numpy as np
-import pandas as pd
-import anaconda_project
-import anaconda_navigator
-import collections
 
 
 def unique(list1):
@@ -16,12 +11,6 @@ def unique(list1):
             unique_list.append(x)
     # print list
     return unique_list
-
-
-df = pd.DataFrame(testlist)
-grouped = df.groupby(testlist)
-print(unique(testlist))
-np.unique(np.array(testlist))
 
 
 testlist = [3, 3, 3, 2, 2, 3, 2, 3, 2, 3, 4, 4, 4, 4, 2, 2, 4, 4, 4, 2, 2, 4]
@@ -41,7 +30,7 @@ def getunorderedlist(counts):
         for i, j in zip(range(count), getnumberindex):
             returncount.append(originalcount[j])
         for j in range(count):
-            #print(count, range(count))
+            # print(count, range(count))
             originalcount.pop(originalcount.index(count))
         print(range(count), originalcount)
     return returncount
